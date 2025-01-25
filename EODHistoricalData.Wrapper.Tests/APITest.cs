@@ -24,7 +24,7 @@ namespace EODHistoricalData.Wrapper.NetCore.Tests
             string apiKey = null;
             try
             {
-                apiKey = File.ReadAllText(@"D:\EOD files\apikey.txt");
+                apiKey = File.ReadAllText(@"c:\temp\EODHistoricalDataApiKey.txt");
             }
             catch
             {

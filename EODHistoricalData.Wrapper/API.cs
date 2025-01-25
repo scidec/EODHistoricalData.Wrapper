@@ -488,16 +488,16 @@ namespace EOD
             return await exchangeSymbolsAPI.GetExchangeSymbolsAsync(code);
         }
 
-        /// <summary>
-        /// Get historical dividends 
-        /// </summary>
-        /// <param name="ticker">ticker consists of two parts: {SYMBOL_NAME}.{EXCHANGE_ID}, then you can use,
-        /// for example, AAPL.MX for Mexican Stock Exchange. or AAPL.US for NASDAQ.</param>
-        /// <param name="from">start search period</param>
-        /// <param name="to">end search period</param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
-        public async Task<List<HistoricalDividend>> GetHistoricalDividendsAsync(string ticker, DateTime from, DateTime to)
+		/// <summary>
+		/// Get historical dividends 
+		/// </summary>
+		/// <param name="ticker">ticker consists of two parts: {SYMBOL_NAME}.{EXCHANGE_ID}, then you can use,
+		/// for example, AAPL.MX for Mexican Stock Exchange. or AAPL.US for NASDAQ.</param>
+		/// <param name="from">date from with format “Y-m-d”</param>
+		/// <param name="to">date to with format “Y-m-d”</param>
+		/// <returns></returns>
+		/// <exception cref="ArgumentException"></exception>
+		public async Task<List<HistoricalDividend>> GetHistoricalDividendsAsync(string ticker, DateTime? from, DateTime? to)
         {
             CheckTicker(ticker);
 
